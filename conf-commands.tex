@@ -1,0 +1,58 @@
+% ------------- MY COMMANDS ------------- %
+
+% Update list item colour
+% http://tex.stackexchange.com/questions/110101/how-to-change-the-color-of-bullets-in-a-list
+\newcommand{\itemcolor}[1]{
+  \renewcommand{\makelabel}[1]{\color{#1}\hfil ##1}}
+
+
+% Use this to embed contents in the middle of slides where some slides are greyed out
+\newcommand{\B}{{\bf B}}
+\newcommand{\J}{{\bf J}}
+\newcommand{\E}{{\bf E}}
+\newcommand{\F}{{\bf F}}
+\newcommand{\D}{{\bf D}}
+\renewcommand{\r}{{\bf r}}
+\renewcommand{\t}{{\bf t}}
+\renewcommand{\H}{{\bf H}}
+\newcommand{\courtesy}[1]{\begin{center}{\tiny [#1]}\end{center}}
+\newcommand{\showsection}{ALL}
+\newcommand{\tocitem}[2]{%
+\ifthenelse{\equal{\showsection}{ALL}}
+	{\item #2}
+	{\ifthenelse{\equal{\showsection}{#1}}
+		{\item #2}
+	    {\itemcolor{gray} \item {\color{gray} #2} \itemcolor{title}}
+	 }
+}
+\newcommand{\subtoc}[2]{\ifthenelse{\equal{\showsection}{#1}}{#2}{}}
+% to show something only on extended slides
+\newcommand{\extended}[1]{#1}
+%\newcommand{\extended}[1]{}
+
+\mdfdefinestyle{mystyle}{%
+  rightline=true,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  outerlinewidth=2pt,
+  outerlinecolor=title,
+  backgroundcolor=hlbg,
+  topline=false,
+  rightline=false,
+  bottomline=false,
+  skipabove=0,
+  skipbelow=0
+}
+
+\newcommand{\hlbox}[1]{
+\vspace*{2mm}
+\begin{mdframed}[style=mystyle]#1\end{mdframed}
+\vspace*{2mm}
+}
+
+\newcommand{\myEmph}[1]{%
+  {\bf\color{title}{%
+    #1%
+  }}%
+}
+

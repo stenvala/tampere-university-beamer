@@ -1,0 +1,29 @@
+% ------------- CUSTOM BEAMER CONFIGURATION ------------- %
+
+\definecolor{foreground}{RGB}{0,0,0}
+\definecolor{background}{RGB}{255,255,255}
+
+\definecolor{title}{RGB}{78,0,142}
+\definecolor{subtitle}{RGB}{78,0,142}
+\definecolor{institute}{RGB}{78,0,142}
+\definecolor{hlbg}{RGB}{225,226,255}
+
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{subtitle}{fg=subtitle}
+\setbeamercolor{institute}{fg=institute}
+\setbeamercolor{normal text}{fg=foreground,bg=background}
+
+\setbeamercolor{item}{fg=title} % color of bullets
+\setbeamercolor{subitem}{fg=black}
+\setbeamercolor{itemize/enumerate subbody}{fg=black}
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
+\setbeamersize{text margin left=10pt,text margin right=10pt}
+%\setbeamertemplate{frametitle}[default][center]
+
+% ------------- SHOWN STUFF IN SLIDES WITH OPAQUE WHEN TRANSITIONS OCCUR ------------- %
+
+\setbeamercovered{invisible}
+\setbeamercovered{again covered={\opaqueness<1->{50}}}
