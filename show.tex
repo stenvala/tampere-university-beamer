@@ -1,0 +1,50 @@
+% STUDENTS' VERSION
+%\documentclass[handout,t]{beamer}
+%\usepackage{handoutWithNotes}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{1 on 1 with notes landscape}[a4paper,border shrink=5mm]
+
+% MY VERSION
+%\documentclass[handout,t]{beamer}
+%\usepackage{handoutWithNotes}
+%\setbeameroption{show notes}
+%\setbeamertemplate{note page}[plain]
+%\setbeameroption{show notes on second screen=bottom}
+%\AtBeginNote{\hspace*{-1cm}\addtolength\leftmargini{-1cm}}
+%\AtEndNote{\addtolength\leftmargini{2cm}}
+
+% PLAIN SLIDES
+\documentclass[t]{beamer}
+
+% PLAIN SLIDES WITHOUT TRANSITIONS	
+%\documentclass[handout,t]{beamer}
+
+%
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+
+% ------------- ENCODING ------------- %
+
+%\usepackage[T1]{fontenc} % iso-8859-1
+\usepackage[utf8]{inputenc} % utf-8
+
+% ------------- CONF ------------- %
+
+\input{conf-packages.tex}
+\input{conf-beamer.tex}
+\input{conf-commands.tex}
+
+\input{conf-footer.tex}
+
+\setbeamertemplate{enumerate subitem}{\Alph{enumii}}
+
+% ------------- BEGIN PRESENTATION ------------- %
+
+\begin{document}
+
+\input{slideTitle.tex}
+\input{slideContents.tex}
+\input{slideBackground.tex}
+\input{slideThanks.tex}
+
+\end{document}
