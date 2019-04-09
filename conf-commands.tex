@@ -30,7 +30,7 @@
 \newcommand{\extended}[1]{#1}
 %\newcommand{\extended}[1]{}
 
-\mdfdefinestyle{mystyle}{%
+\mdfdefinestyle{taustyle}{%
   rightline=true,
   innerleftmargin=10pt,
   innerrightmargin=10pt,
@@ -44,13 +44,13 @@
   skipbelow=0
 }
 
-\newcommand{\hlbox}[1]{
+\newcommand{\tauBox}[1]{
 \vspace*{2mm}
-\begin{mdframed}[style=mystyle]#1\end{mdframed}
+\begin{mdframed}[style=taustyle]#1\end{mdframed}
 \vspace*{2mm}
 }
 
-\newcommand{\myEmph}[1]{%
+\newcommand{\tauEmph}[1]{%
   {\bf\color{title}{%
     #1%
   }}%
